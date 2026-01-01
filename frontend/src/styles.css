@@ -1,0 +1,286 @@
+:root {
+  font-family: 'Manrope', system-ui, sans-serif;
+  color-scheme: light;
+  color: #0b1220;
+  background-color: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 48px clamp(24px, 5vw, 72px) 64px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #51607a;
+}
+
+h1 {
+  margin: 12px 0 12px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.subhead {
+  max-width: 480px;
+  color: #4a5a72;
+}
+
+.summary-card {
+  background: #0b1220;
+  color: white;
+  padding: 24px;
+  border-radius: 20px;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+}
+
+.summary-card h2 {
+  margin: 8px 0;
+  font-size: 2.5rem;
+}
+
+.summary-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.summary-detail {
+  color: #c2c8d4;
+  font-size: 0.9rem;
+}
+
+.progress-track {
+  margin-top: 12px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  background: #62d4a6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.panel {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panel-subtext {
+  margin: 4px 0 0;
+  color: #5b6b84;
+}
+
+.goal-form {
+  display: grid;
+  gap: 16px;
+}
+
+.goal-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.goal-form input,
+.goal-form textarea {
+  border: 1px solid #d9e0ec;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.goal-form button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.goal-form button:disabled {
+  background: #b0c3f0;
+  cursor: not-allowed;
+}
+
+.steps {
+  display: grid;
+  gap: 12px;
+  background: #f5f7fb;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.steps-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.step-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+}
+
+.goal-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.goal-card {
+  padding: 20px;
+  background: #fdfdff;
+  border: 1px solid #e6ebf5;
+  border-radius: 16px;
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.goal-header h4 {
+  margin: 0 0 6px;
+}
+
+.goal-meta {
+  text-align: right;
+  color: #4a5a72;
+}
+
+.goal-progress {
+  margin: 12px 0;
+  height: 6px;
+  background: #e3e8f2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.goal-progress span {
+  display: block;
+  height: 100%;
+  background: #2563eb;
+}
+
+.goal-date {
+  color: #6c7c96;
+  font-size: 0.9rem;
+}
+
+.goal-steps {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.step-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  background: #f5f7fb;
+  border-radius: 12px;
+}
+
+.step-item strong {
+  display: block;
+}
+
+.step-item span {
+  display: block;
+  font-size: 0.85rem;
+  color: #54627a;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid #d0d8e5;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.danger {
+  border: none;
+  background: #f87171;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.error {
+  color: #b42318;
+  background: #fef3f2;
+  border: 1px solid #fecaca;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.muted {
+  color: #6c7c96;
+}
+
+@media (max-width: 960px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .step-row {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .goal-meta {
+    text-align: left;
+  }
+}
